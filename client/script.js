@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
-    // 'https://codex-im0y.onrender.com/'
+    // 'https://codex-im0y.onrender.com/' https://avi-chat-test.onrender.com/
     const response = await fetch('https://avi-chat-test.onrender.com/', {
         method: 'POST',
         headers: {
