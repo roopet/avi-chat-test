@@ -3,7 +3,12 @@ import * as dotenv from 'dotenv'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
 import { PineconeClient } from "@pinecone-database/pinecone";
-import mappings from './mapping.json' assert { type: 'json' };
+//import mappings from './mapping.json' assert { type: 'json' };
+//import mappings from './mapping.json';
+
+const mappings = await import('./mapping.json', {
+  assert: { type: 'json' }
+});
 
 dotenv.config()
 
