@@ -6,9 +6,12 @@ import { PineconeClient } from "@pinecone-database/pinecone";
 //import mappings from './mapping.json' assert { type: 'json' };
 //import mappings from './mapping.json';
 
-const mappings = await import('./mapping.json', {
-  assert: { type: 'json' }
-});
+//const mappings = await import('./mapping.json', {
+//  assert: { type: 'json' }
+//});
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const mappings = require("./mapping.json");
 
 dotenv.config()
 
