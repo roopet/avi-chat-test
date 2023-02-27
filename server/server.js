@@ -226,10 +226,7 @@ const response = await openai.createCompletion({
 //console.log(response.data.choices)
 //console.log(response.data.choices[0].text)
 //console.log(response.data.choices[0].text.trim())
-function addLinks(text) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  return text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
-}
+
 console.log(response.data.choices[0].text)
     res.status(200).send({
       bot: response.data.choices[0].text//.trim()
